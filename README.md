@@ -13,3 +13,9 @@ Terraform module to deploy an AWS CodePipeline and CodeBuild Terraform engine to
 1. CodePipeline downloads the Terraform module zip package from the source bucket, then starts a CodeBuild project to plan the Terraform module. The plan and a plan summary are saved as artifacts in S3 (output `artifacts_bucket`).
 1. CodePipeline waits for [Approval](https://docs.aws.amazon.com/codepipeline/latest/userguide/approvals.html) of the planned change. The user reviews the plan in the CodePipeline console, and approves the plan to be applied.
 1. After approval, CodePipeline starts the CodeBuild project again. CodeBuild applies the planned change for the Terraform module.
+
+## Screenshots
+
+CodePipeline pipeline stages and actions:
+
+![CodePipeline screenshot](/images/codepipeline-screenshot.png)
