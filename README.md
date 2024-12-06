@@ -1,6 +1,6 @@
 # Terraform CodePipeline Engine
 
-Terraform module to deploy an AWS CodePipeline and CodeBuild Terraform engine to plan and apply other Terraform modules. Basic workflow:
+This Terraform module implements a basic CodePipeline Terraform CI/CD workflow with stages for Terraform plan, manual approval, and Terraform apply. Terraform plan and Terraform apply stages utilize a CodeBuild project to execute Terraform commands. Terraform CI/CD can become complex for larger projects, and this Terraform module could be modified and extended to support more complex workflows. The basic workflow this module implements is described below:
 
 1. A user uploads a Terraform module as a zip package to the source S3 bucket created by this module (output `source_bucket`).
    Note: Terraform module zip packages must be uploaded to the source bucket created by this module. CodePipeline executions cannot start with overridden S3 bucket sources.
