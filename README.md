@@ -16,6 +16,24 @@ Terraform module to deploy an AWS CodePipeline and CodeBuild Terraform engine to
 
 ## Screenshots
 
+These screenshots were taken by deploying [the example module usage at `examples/default/`](/examples/default/).
+
 CodePipeline pipeline stages and actions:
 
-![CodePipeline screenshot](/images/codepipeline-screenshot.png)
+![CodePipeline screenshot](/images/pipeline-stages.png)
+
+Pipeline waiting for approval:
+
+![CodePipeline screenshot](/images/waiting-for-approval.png)
+
+Terraform plan output in CodePipeline console:
+
+![CodePipeline screenshot](/images/terraform-plan-output.png)
+
+Approving a Terraform plan:
+
+![CodePipeline screenshot](/images/manual-approval.png)
+
+Terraform apply output in CodePipeline console:
+
+![CodePipeline screenshot](/images/terraform-apply-output.png)
